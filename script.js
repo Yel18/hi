@@ -1,8 +1,12 @@
 const button = document.getElementById('button');
 const noButton = document.getElementById('no-button');
+const heart = document.getElementById('heart');
+const message = document.getElementById('message');
 
 button.addEventListener('click', () => {
-  alert('Yay! I am so happy!');
+  heart.src = "https://media1.tenor.com/m/XZGm-kKjguMAAAAC/kawaii-bunny.gif";
+  message.innerText = "Yay!!!";
+  button.style.display = 'none';
   noButton.style.display = 'none';
 });
 
