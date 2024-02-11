@@ -1,70 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+}
+
 #valentine-button {
-  background-color: pink;
+  background-color: #ffc0cb;
   border: none;
-  color: white;
+  color: #fff;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 4px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 16px auto;
   cursor: pointer;
+  border-radius: 16px;
+  width: 300px;
+  height: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#valentine-button p {
+  margin: 0;
+  flex: 1;
+}
+
+#valentine-button button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
 }
 
 #response-container {
-  margin-top: 10px;
+  display: none;
   text-align: center;
+  padding: 16px;
 }
 
-#response-container button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
+#response-container #image-container {
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
 }
 
-#image-container {
-  width: 300px;
-  margin: 0 auto 10px auto;
-}
-
-#image {
+#response-container #image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
-#no-button {
-  background-color: red;
+#response-container #buttons-container {
+  display: flex;
+  justify-content: center;
 }
 
-#no-button:hover {
-  background-color: darkred;
+#response-container #buttons-container button {
+  background-color: #fff;
+  color: #f00;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 0 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#yes-button {
-  background-color: green;
-}
-
-#yes-button:hover {
-  background-color: darkgreen;
+#response-container #buttons-container button:hover {
+  background-color: #f00;
+  color: #fff;
 }
 
 @media (max-width: 600px) {
   #valentine-button {
-    font-size: 14px;
+    width: 100%;
   }
 
-  #response-container button {
-    font-size: 14px;
+  #response-container #image-container {
+    width: 80px;
+    height: 80px;
   }
 
-  #image {
-    width: 200px;
-    height: auto;
-  }
-}
+ 
