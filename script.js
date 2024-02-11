@@ -1,24 +1,24 @@
-const button = document.getElementById("valentine-button");
+const valentineButton = document.getElementById("valentine-button");
+const valentineButtonInner = document.getElementById("valentine-button-inner");
 const responseContainer = document.getElementById("response-container");
-const yesButton = document.getElementById("yes-button");
 const noButton = document.getElementById("no-button");
-const imageContainer = document.getElementById("image-container");
+const yesButton = document.getElementById("yes-button");
 const image = document.getElementById("image");
 
-button.addEventListener("click", function() {
+valentineButtonInner.addEventListener("click", () => {
   responseContainer.style.display = "block";
+  image.style.display = "block";
+  valentineButton.style.display = "none";
 });
 
-yesButton.addEventListener("click", function() {
+noButton.addEventListener("click", () => {
   responseContainer.style.display = "none";
-  button.textContent = "";
   image.style.display = "none";
-
-  // Remove the event listener for the "click" event
-  yesButton.removeEventListener("click", arguments.callee);
+  valentineButton.style.display = "block";
 });
 
-noButton.addEventListener("click", function() {
+yesButton.addEventListener("click", () => {
   responseContainer.style.display = "none";
-  button.textContent = "Will you be my Valentine?";
+  image.style.display = "none";
+  valentineButton.style.display = "block";
 });
