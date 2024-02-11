@@ -17,6 +17,7 @@
 }
 
 #response-container button {
+  background-color: lightgreen;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -26,6 +27,10 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+#response-container button:hover {
+  background-color: darkgreen;
 }
 
 #image-container {
@@ -40,18 +45,6 @@
 
 #no-button {
   background-color: red;
-}
-
-#no-button:hover {
-  background-color: darkred;
-}
-
-#yes-button {
-  background-color: green;
-}
-
-#yes-button:hover {
-  background-color: darkgreen;
 }
 
 @media (max-width: 600px) {
