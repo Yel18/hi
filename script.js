@@ -19,6 +19,8 @@ let noButtonTextIndex = 0;
 button.addEventListener('click', () => {
   heart.src = "https://media1.tenor.com/m/XZGm-kKjguMAAAAC/kawaii-bunny.gif";
   message.innerText = "Yay!!!";
+  message.style.fontWeight = "bold";
+  message.style.fontSize = "3rem";
   button.style.display = 'none';
   noButton.style.display = 'none';
 });
@@ -44,4 +46,4 @@ noButton.style.borderRadius = '50%';
 // Prevent scrolling when the no button is moved
 const originalBodyOverflow = document.body.style.overflow;
 noButton.addEventListener('mousedown', () => {
-  document.body.style.overflow =
+  document.body.
