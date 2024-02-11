@@ -10,6 +10,7 @@ button.addEventListener("click", function() {
 yesButton.addEventListener("click", function() {
   responseContainer.style.display = "none";
   button.textContent = "Yes!";
+  
 });
 
 noButton.addEventListener("click", function() {
