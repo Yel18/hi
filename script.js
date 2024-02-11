@@ -1,4 +1,4 @@
-coconst button = document.getElementById('button');
+const button = document.getElementById('button');
 const noButton = document.getElementById('no-button');
 const heart = document.getElementById('heart');
 const message = document.getElementById('message');
@@ -19,8 +19,6 @@ let noButtonTextIndex = 0;
 button.addEventListener('click', () => {
   heart.src = "https://media1.tenor.com/m/XZGm-kKjguMAAAAC/kawaii-bunny.gif";
   message.innerText = "Yay!!!";
-  message.style.fontWeight = "bold";
-  message.style.fontSize = "3rem";
   button.style.display = 'none';
   noButton.style.display = 'none';
 });
@@ -46,15 +44,4 @@ noButton.style.borderRadius = '50%';
 // Prevent scrolling when the no button is moved
 const originalBodyOverflow = document.body.style.overflow;
 noButton.addEventListener('mousedown', () => {
-  document.body.style.overflowwindow.addEventListener('scroll', () => {
-  noButton.style.display = 'none';
-});
-
-window.addEventListener('resize', () => {
-  const maxX = window.innerWidth - noButton.offsetWidth;
-  const maxY = window.innerHeight - noButton.offsetHeight;
-  const randomX = Math.floor(Math.random() * (maxX + 1));
-  const randomY = Math.floor(Math.random() * (maxY + 1));
-  noButton.style.left = `${randomX}px`;
-  noButton.style.top = `${randomY}px`;
-});
+  document.body.style.overflow =
