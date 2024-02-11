@@ -32,8 +32,13 @@ noButton.addEventListener('click', () => {
   const randomY = Math.floor(Math.random() * (maxY + 1));
   noButton.style.left = `${randomX}px`;
   noButton.style.top = `${randomY}px`;
-  noButton.style.display = '';
+  if (noButtonTextIndex >= noButtonTexts.length) {
+    noButtonTextIndex = 0;
+  }
+  noButton.innerText = noButtonTexts[noButtonTextIndex];
+  noButtonTextIndex++;
 });
+
 
 window.addEventListener('scroll', () => {
   noButton.style.display = 'none';
