@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Will you be my Valentine?</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <button id="valentine-button">Will you be my Valentine?</button>
-    <div id="response-container" style="display: none;">
-      <div id="image-container">
-        <img id="image" src="https://www.icegif.com/wp-content/uploads/icegif-1.gif" alt="Heart" />
-      </div>
-      <button id="yes-button">Yes</button>
-      <button id="no-button">No</button>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+const button = document.getElementById("valentine-button");
+const responseContainer = document.getElementById("response-container");
+const yesButton = document.getElementById("yes-button");
+const noButton = document.getElementById("no-button");
+const imageContainer = document.getElementById("image-container");
+const image = document.getElementById("image");
+
+button.addEventListener("click", function() {
+  responseContainer.style.display = "block";
+});
+
+yesButton.addEventListener("click", function() {
+  responseContainer.style.display = "none";
+  button.textContent = "";
+  image.style.display = "none";
+
+  // Remove the event listener for the "click" event
+  yesButton.removeEventListener("click", arguments.callee);
+});
+
+noButton.addEventListener("click", function() {
+  responseContainer.style.display = "none";
+  button.textContent = "Will you be my Valentine?";
+});
