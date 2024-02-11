@@ -46,4 +46,4 @@ noButton.style.borderRadius = '50%';
 // Prevent scrolling when the no button is moved
 const originalBodyOverflow = document.body.style.overflow;
 noButton.addEventListener('mousedown', () => {
-  document.body.
+  document.body
