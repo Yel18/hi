@@ -3,6 +3,21 @@ const noButton = document.getElementById('no-button');
 const heart = document.getElementById('heart');
 const message = document.getElementById('message');
 
+const noButtonTexts = [
+  "Sure?",
+  "Sure nagyud?",
+  "Pleasee:<",
+  ":<",
+  "ma sad ko :<",
+  "di ko makatug unya",
+  ":<, ok muundang nako",
+  "joke, yes na pls",
+  "wa na nihilak nako",
+  "you're breaking my heart :(",
+  "Larrrr :<"
+];
+let noButtonTextIndex = 0;
+
 button.addEventListener('click', () => {
   heart.src = "https://media1.tenor.com/m/XZGm-kKjguMAAAAC/kawaii-bunny.gif";
   message.innerText = "Yay!!!";
