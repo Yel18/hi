@@ -1,99 +1,32 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  padding: 0;
-  margin: 0;
-}
-
-#valentine-button {
-  background-color: #ffc0cb;
-  border: none;
-  color: #fff;
-  padding: 15px 32px;
+#valentine {
   text-align: center;
-  text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin: 16px auto;
+  margin-top: 100px;
+}
+
+#heart {
+  width: 200px;
+  height: 200px;
+}
+
+#message {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 10px 30px;
   cursor: pointer;
-  border-radius: 16px;
-  width: 300px;
-  height: 100px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#valentine-button p {
-  margin: 0;
-  flex: 1;
+.green {
+  background-color: green;
 }
 
-#valentine-button button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
+.red {
+  background-color: red;
 }
 
-#response-container {
-  display: none;
-  text-align: center;
-  padding: 16px;
+button:hover {
+  background-color: #ffcccc;
 }
-
-#response-container #image-container {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 16px;
-}
-
-#response-container #image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#response-container #buttons-container {
-  display: flex;
-  justify-content: center;
-}
-
-#response-container #buttons-container button {
-  background-color: #fff;
-  color: #f00;
-  border: none;
-  border-radius: 16px;
-  padding: 8px 16px;
-  font-size: 16px;
-  margin: 0 8px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#response-container #buttons-container button:hover {
-  background-color: #f00;
-  color: #fff;
-}
-
-@media (max-width: 600px) {
-  #valentine-button {
-    width: 100%;
-  }
-
-  #response-container #image-container {
-    width: 80px;
-    height: 80px;
-  }
-
- 
