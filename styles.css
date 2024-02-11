@@ -17,18 +17,20 @@ button {
   font-size: 1.5rem;
   padding: 10px 30px;
   cursor: pointer;
-  border-radius: 25px; 
-  padding: 10px 20px; 
 }
 
 .green {
   background-color: green;
   color: white;
+  border-radius: 25px;
+  padding: 10px 20px; 
 }
 
 .red {
   background-color: red;
   color: white;
+  border-radius: 25px;
+  padding: 10px 20px; 
 }
 
 button:hover {
