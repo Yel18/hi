@@ -21,12 +21,14 @@ button {
 
 .green {
   background-color: green;
-  border-radius: 50%;
+  border-radius: 25px; 
+  padding: 10px 20px; 
 }
 
 .red {
   background-color: red;
-  border-radius: 50%;
+  border-radius: 25px; 
+  padding: 10px 20px; 
 }
 
 button:hover {
