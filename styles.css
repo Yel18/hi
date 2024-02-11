@@ -21,15 +21,12 @@ button {
 
 .green {
   background-color: green;
-  color: white;
 }
 
 .red {
   background-color: red;
-  color: white;
 }
 
 button:hover {
   background-color: #ffcccc;
-  color: black;
 }
