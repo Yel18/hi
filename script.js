@@ -20,7 +20,7 @@ button.addEventListener('click', () => {
   heart.src = "https://media1.tenor.com/m/XZGm-kKjguMAAAAC/kawaii-bunny.gif";
   message.innerText = "Yay!!!";
   message.style.fontWeight = "bold";
-  message.style.fontSize = "36px";
+  message.style.fontSize = "3rem";
   button.style.display = 'none';
   noButton.style.display = 'none';
 });
@@ -39,16 +39,11 @@ noButton.addEventListener('click', () => {
   noButtonTextIndex++;
 });
 
+// Make the buttons rounder
+button.style.borderRadius = '50%';
+noButton.style.borderRadius = '50%';
 
-window.addEventListener('scroll', () => {
-  noButton.style.display = 'none';
-});
-
-window.addEventListener('resize', () => {
-  const maxX = window.innerWidth - noButton.offsetWidth;
-  const maxY = window.innerHeight - noButton.offsetHeight;
-  const randomX = Math.floor(Math.random() * (maxX + 1));
-  const randomY = Math.floor(Math.random() * (maxY + 1));
-  noButton.style.left = `${randomX}px`;
-  noButton.style.top = `${randomY}px`;
-});
+// Prevent scrolling when the no button is moved
+const originalBodyOverflow = document.body.style.overflow;
+noButton.addEventListener('mousedown', () => {
+  document.body.style.overflow
