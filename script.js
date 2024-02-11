@@ -12,7 +12,8 @@ button.addEventListener("click", function() {
 
 yesButton.addEventListener("click", function() {
   responseContainer.style.display = "none";
-  button.textContent = "Yes!";
+  button.textContent = "";
+  image.style.display = "none";
 
   // Remove the event listener for the "click" event
   yesButton.removeEventListener("click", arguments.callee);
