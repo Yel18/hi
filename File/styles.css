@@ -1,12 +1,17 @@
-const button = document.getElementById("valentine-button");
-const image = document.getElementById("valentine-image");
+#valentine-button {
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
-button.addEventListener("click", function() {
-  if (button.textContent === "Will you be my Valentine?") {
-    button.textContent = "";
-    image.style.display = "block";
-  } else {
-    button.textContent = "Will you be my Valentine?";
-    image.style.display = "none";
-  }
-});
+#valentine-image {
+  width: 100%;
+  height: auto;
+}
