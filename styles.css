@@ -21,10 +21,12 @@ button {
 
 .green {
   background-color: green;
+  border-radius: 50%;
 }
 
 .red {
   background-color: red;
+  border-radius: 50%;
 }
 
 button:hover {
