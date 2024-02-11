@@ -37,7 +37,6 @@ noButton.addEventListener('click', () => {
   }
   noButton.innerText = noButtonTexts[noButtonTextIndex];
   noButtonTextIndex++;
-});
 
   // Prevent scrolling
   document.body.style.overflow = 'hidden';
