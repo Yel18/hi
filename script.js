@@ -1,35 +1,31 @@
-const button = document.getElementById('button');
 const noButton = document.getElementById('no-button');
 
-button.addEventListener('click', () => {
-  alert('Yay! I am so happy!');
-  noButton.style.display = 'none';
-});
-
-noButton.addEventListener('click', () => {
+function moveNoButton() {
+  const maxX = window.innerWidth - noButton.offsetWidth;
+  const maxY = window.innerHeight - noButton.offsetHeight;
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
   noButton.style.position = 'absolute';
-  let left = Math.random() * (window.innerWidth - noButton.offsetWidth);
-  let top = Math.random() * (window.innerHeight - noButton.offsetHeight);
-  noButton.style.left = `${left}px`;
-  noButton.style.top = `${top}px`;
+  noButton.style.left = `${randomX}px`;
+  noButton.style.top = `${randomY}px`;
+}
 
-  // Prevent scrolling
+function handleNoButtonClick() {
+  noButton.style.display = 'none';
   document.body.style.overflow = 'hidden';
+  moveNoButton();
+  document.body.style.overflow = 'auto';
+}
 
-  // Check if button is outside the screen
-  const checkButtonPosition = () => {
-    if (noButton.offsetLeft < 0 || noButton.offsetLeft + noButton.offsetWidth > window.innerWidth || noButton.offsetTop < 0 || noButton.offsetTop + noButton.offsetHeight > window.innerHeight) {
-      noButton.style.left = `${left}px`;
-      noButton.style.top = `${top}px`;
-    } else {
-      // Remove event listener to prevent infinite loop
-      document.removeEventListener('scroll', checkButtonPosition);
-      // Allow scrolling
-      document.body.style.overflow = 'auto';
-    }
-  };
+noButton.addEventListener('click', handleNoButtonClick);
 
-  // Check button position on scroll
-  document.addEventListener('scroll', checkButtonPosition);
-  checkButtonPosition();
-});
+function handleScroll() {
+  if (window.scrollY === 0) {
+    noButton.style.display = 'none';
+  } else {
+    noButton.style.display = 'block';
+    moveNoButton();
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
