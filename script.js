@@ -1,9 +1,11 @@
 const button = document.getElementById('button');
 const noButton = document.getElementById('no-button');
+const heart = document.getElementById('heart');
+const message = document.getElementById('message');
 
 button.addEventListener('click', () => {
-  alert('Yay! I am so happy!');
-  noButton.style.display = 'none';
+  heart.src = "https://media1.tenor.com/m/OqW4q0evlmgAAAAC/frog-frog-love.gif";
+  message.innerText = "Yay!!!";
 });
 
 noButton.addEventListener('click', () => {
