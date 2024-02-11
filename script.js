@@ -1,24 +1,10 @@
-const valentineButton = document.getElementById("valentine-button");
-const valentineButtonInner = document.getElementById("valentine-button-inner");
-const responseContainer = document.getElementById("response-container");
-const noButton = document.getElementById("no-button");
-const yesButton = document.getElementById("yes-button");
-const image = document.getElementById("image");
+const button = document.getElementById('button');
+const noButton = document.getElementById('no-button');
 
-valentineButtonInner.addEventListener("click", () => {
-  responseContainer.style.display = "block";
-  image.style.display = "block";
-  valentineButton.style.display = "none";
+button.addEventListener('click', () => {
+  alert('Yay! I am so happy!');
 });
 
-noButton.addEventListener("click", () => {
-  responseContainer.style.display = "none";
-  image.style.display = "none";
-  valentineButton.style.display = "block";
-});
-
-yesButton.addEventListener("click", () => {
-  responseContainer.style.display = "none";
-  image.style.display = "none";
-  valentineButton.style.display = "block";
+noButton.addEventListener('click', () => {
+  alert('Oh no! I will keep trying!');
 });
